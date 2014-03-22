@@ -1,5 +1,3 @@
 module.exports = (Tectonic) ->
-  Tectonic.Component = {}
-
-  Tectonic.Component.Component = require './component'
-  Tectonic.Component.ComponentCollection = require './component-collection'
+  Tectonic.Component = require './component'
+  Tectonic.ComponentCollection = require './component-collection'

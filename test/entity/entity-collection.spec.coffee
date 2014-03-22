@@ -4,11 +4,11 @@ Tectonic = require '../../src/Tectonic'
 describe 'Entity Collection', ->
 
   beforeEach ->
-    @entityCollection = new Tectonic.Entity.EntityCollection
+    @entityCollection = new Tectonic.EntityCollection
 
   describe 'add method', ->
     it 'should add a new entity to the collection', ->
-      entity = new Tectonic.Entity.Entity
+      entity = new Tectonic.Entity
 
       @entityCollection.add entity
 
@@ -18,9 +18,9 @@ describe 'Entity Collection', ->
 
   describe 'findByName method', ->
     it 'should find entities in the collection by name', ->
-      entity1 = new Tectonic.Entity.Entity
-      entity2 = new Tectonic.Entity.Entity
-      entity3 = new Tectonic.Entity.Entity
+      entity1 = new Tectonic.Entity
+      entity2 = new Tectonic.Entity
+      entity3 = new Tectonic.Entity
 
       @entityCollection.add entity1
       @entityCollection.add entity2
@@ -44,9 +44,9 @@ describe 'Entity Collection', ->
 
   describe 'getByName method', ->
     it 'should find a single entity in the collection by name', ->
-      entity1 = new Tectonic.Entity.Entity
-      entity2 = new Tectonic.Entity.Entity
-      entity3 = new Tectonic.Entity.Entity
+      entity1 = new Tectonic.Entity
+      entity2 = new Tectonic.Entity
+      entity3 = new Tectonic.Entity
 
       @entityCollection.add entity1
       @entityCollection.add entity2
@@ -63,7 +63,7 @@ describe 'Entity Collection', ->
   describe 'getByUuid method', ->
     it 'should find a single entity in the collection by uuid', ->
       uuid = uuid.v1()
-      entity = new Tectonic.Entity.Entity
+      entity = new Tectonic.Entity
       entity.uuid = uuid
       @entityCollection.add entity
 

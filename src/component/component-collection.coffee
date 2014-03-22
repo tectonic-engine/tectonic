@@ -1,3 +1,5 @@
+_ = require 'lodash'
+
 class ComponentCollection
   constructor: ->
     @components = {}

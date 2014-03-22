@@ -1,5 +1,3 @@
 module.exports = (Tectonic) ->
-  Tectonic.Entity = {}
-
-  Tectonic.Entity.Entity = require './entity'
-  Tectonic.Entity.EntityCollection = require './entity-collection'
+  Tectonic.Entity = require './entity'
+  Tectonic.EntityCollection = require './entity-collection'
