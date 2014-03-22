@@ -1,0 +1,27 @@
+{
+  "name": "tectonic",
+  "version": "0.0.0",
+  "description": "A simple and efficient game engine for Node and Web Platforms [WIP]",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node --coffee test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/madjam002/tectonic.git"
+  },
+  "keywords": [
+    "game",
+    "engine",
+    "framework",
+    "threejs",
+    "graphics",
+    "render"
+  ],
+  "author": "Jamie Greeff <madjam002@yahoo.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madjam002/tectonic/issues"
+  },
+  "homepage": "https://github.com/madjam002/tectonic"
+}
