@@ -1,3 +1,4 @@
+uuid = require 'node-uuid'
 Tectonic = require '../../src/Tectonic'
 
 describe 'Entity Collection', ->
@@ -57,3 +58,13 @@ describe 'Entity Collection', ->
 
       expect(@entityCollection.getByName 'foobarbaz').toBe entity1
       expect(@entityCollection.getByName 'foobarbar').toBe entity2
+
+
+  describe 'getByUuid method', ->
+    it 'should find a single entity in the collection by uuid', ->
+      uuid = uuid.v1()
+      entity = new Tectonic.Entity.Entity
+      entity.uuid = uuid
+      @entityCollection.add entity
+
+      expect(@entityCollection.getByUuid uuid).toBe entity

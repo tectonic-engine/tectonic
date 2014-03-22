@@ -13,4 +13,7 @@ class EntityCollection
   getByName: (name) ->
     _.findWhere @entities, name: name
 
+  getByUuid: (uuid) ->
+    _.findWhere @entities, uuid: uuid
+
 module.exports = EntityCollection
