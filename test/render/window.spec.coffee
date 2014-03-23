@@ -18,3 +18,21 @@ describe 'Window', ->
 
       expect(viewport1.render).toHaveBeenCalledWith @window
       expect(viewport2.render).toHaveBeenCalledWith @window
+
+  describe 'startRendering method', ->
+    it 'should start the render loop', ->
+      @window.render = createSpy 'render'
+      expect(@window.isRendering).toBe false
+
+      @window.startRendering()
+
+      expect(@window.isRendering).toBe true
+      expect(@window.render).toHaveBeenCalled()
+
+  describe 'stopRendering method', ->
+    it 'should stop the render loop', ->
+      @window.isRendering = true
+
+      @window.stopRendering()
+
+      expect(@window.isRendering).toBe false

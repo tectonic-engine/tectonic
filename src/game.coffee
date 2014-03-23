@@ -5,10 +5,7 @@ class Game
     @window = new Window if options.render
 
   run: ->
-    @render()
-
-  render: ->
-    @window.render()
+    @window?.startRendering()
 
 
 module.exports = Game

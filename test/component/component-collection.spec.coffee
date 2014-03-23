@@ -44,14 +44,12 @@ describe 'Component Collection', ->
         @componentCollection.add otherComponent
       .toThrow()
 
-
   describe 'get method', ->
     it 'should return a component from the given type', ->
       component = new Tectonic.Component 'MyComponent'
       @componentCollection.add component
 
       expect(@componentCollection.get 'MyComponent').toBe component
-
 
   describe 'contains method', ->
     it 'should return whether a component by type exists', ->

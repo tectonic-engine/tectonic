@@ -15,7 +15,6 @@ describe 'Entity Collection', ->
       expect(@entityCollection.entities.length).toBe 1
       expect(@entityCollection.entities[0]).toBe entity
 
-
   describe 'findByName method', ->
     it 'should find entities in the collection by name', ->
       entity1 = new Tectonic.Entity
@@ -41,7 +40,6 @@ describe 'Entity Collection', ->
       expect(results.length).toBe 1
       expect(results).toContain entity2
 
-
   describe 'getByName method', ->
     it 'should find a single entity in the collection by name', ->
       entity1 = new Tectonic.Entity
@@ -58,7 +56,6 @@ describe 'Entity Collection', ->
 
       expect(@entityCollection.getByName 'foobarbaz').toBe entity1
       expect(@entityCollection.getByName 'foobarbar').toBe entity2
-
 
   describe 'getByUuid method', ->
     it 'should find a single entity in the collection by uuid', ->

@@ -16,10 +16,9 @@ describe 'Game', ->
 
       expect(@game.window).toBeUndefined()
 
-
   describe 'run method', ->
-    it 'should start the render loop', ->
-      @game.render = createSpy 'render'
+    it 'should start the render loop on the main window', ->
+      @game.window = createSpyObj 'window', ['startRendering']
       @game.run()
 
-      expect(@game.render).toHaveBeenCalled()
+      expect(@game.window.startRendering).toHaveBeenCalled()
