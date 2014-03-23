@@ -4,7 +4,7 @@
   "description": "A simple and efficient game engine for Node and Web Platforms [WIP]",
   "main": "lib/tectonic/tectonic.js",
   "scripts": {
-    "prepublish": "./node_modules/coffee-script/bin/coffee -o lib/tectonic -c src",
+    "prepublish": "grunt compile",
     "test": "jasmine-node --coffee test/"
   },
   "repository": {
@@ -30,6 +30,12 @@
     "lodash": "~2.4.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.7.1"
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.4",
+    "grunt-browserify": "~2.0.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-coffee": "~0.10.1",
+    "coffeeify": "~0.6.0",
+    "browserify": "~3.33.0"
   }
 }
