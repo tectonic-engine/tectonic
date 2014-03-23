@@ -27,7 +27,8 @@
   "homepage": "https://github.com/madjam002/tectonic",
   "dependencies": {
     "node-uuid": "~1.4.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "three": "~0.66.2"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1",
