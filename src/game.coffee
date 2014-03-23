@@ -8,6 +8,7 @@ class Game
     @render()
 
   render: ->
+    @window.render()
 
 
 module.exports = Game
