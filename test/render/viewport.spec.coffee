@@ -7,7 +7,8 @@ describe 'Viewport', ->
 
   describe 'render method', ->
     it 'should render the viewport', ->
-      renderer = createSpyObj 'renderer', ['render', 'setViewport', 'setScissor', 'enableScissorTest', 'setClearColor']
+      renderer =
+        jasmine.createSpyObj 'renderer', ['render', 'setViewport', 'setScissor', 'enableScissorTest', 'setClearColor']
       window =
         renderer: renderer
         width: 1024

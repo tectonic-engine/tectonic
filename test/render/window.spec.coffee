@@ -7,8 +7,8 @@ describe 'Window', ->
 
   describe 'render method', ->
     it 'should render each viewport', ->
-      viewport1 = createSpyObj 'viewport1', ['render']
-      viewport2 = createSpyObj 'viewport2', ['render']
+      viewport1 = jasmine.createSpyObj 'viewport1', ['render']
+      viewport2 = jasmine.createSpyObj 'viewport2', ['render']
       @window.renderer = {}
 
       @window.viewports.push viewport1
@@ -21,7 +21,7 @@ describe 'Window', ->
 
   describe 'startRendering method', ->
     it 'should start the render loop', ->
-      @window.render = createSpy 'render'
+      @window.render = jasmine.createSpy 'render'
       expect(@window.isRendering).toBe false
 
       @window.startRendering()

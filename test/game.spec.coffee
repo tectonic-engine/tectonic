@@ -18,7 +18,7 @@ describe 'Game', ->
 
   describe 'run method', ->
     it 'should start the render loop on the main window', ->
-      @game.window = createSpyObj 'window', ['startRendering']
+      @game.window = jasmine.createSpyObj 'window', ['startRendering']
       @game.run()
 
       expect(@game.window.startRendering).toHaveBeenCalled()
